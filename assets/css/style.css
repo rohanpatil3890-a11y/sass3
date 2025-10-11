@@ -17,10 +17,137 @@ body {
   font-family: "Lato", "sans-serif";
   color: #777;
   font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    padding: 0px;
+  }
+}
+@keyframes moveInleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveInright {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../image/hero.jpg);
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+.header .logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: inline-block;
+  width: 75px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header-text-box {
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-primary {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 25px;
+  animation: moveInleft 1s ease-in-out;
+}
+@media all and (max-width: 768px) {
+  .header-primary {
+    letter-spacing: 10px;
+  }
+  .header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .header-secondary {
+    letter-spacing: 5px;
+  }
+}
+.header-secondary {
+  font-size: 16px;
+  letter-spacing: 15px;
+  margin-bottom: 30px;
+  animation: moveInright 1s ease-in-out;
+}
+
+.btn, .btn:link, .btn:visited {
+  position: relative;
+  padding: 15px 40px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+.btn::after {
+  content: "";
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s ease-in-out;
+  background-color: inherit;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+.btn:hover, .btn:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.btn:hover::after, .btn:focus::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */
