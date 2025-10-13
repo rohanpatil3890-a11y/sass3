@@ -1,0 +1,27 @@
+.primary-heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include bgGradientClip;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 80px;
+    &:is(:hover, :focus, :active){
+        transform: scale(1.1);
+        text-shadow: 5px 10px 20px rgba($color-dark, .2);
+    }
+}
+
+.secondary-heading{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+.para{
+    font-size: 16px;
+   &:not(:last-child){
+     margin-bottom: 30px;
+     
+   }
+}

@@ -52,12 +52,84 @@ body {
     opacity: 1;
   }
 }
+.primary-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56a, #28b485);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 80px;
+}
+.primary-heading:is(:hover, :focus, :active) {
+  transform: scale(1.1);
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.para {
+  font-size: 16px;
+}
+.para:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 a:link, a:visited {
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+.text-center {
+  align-items: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class^=col-] {
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: 25%;
+  flex: 0 0 25;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 50;
+}
+
+.col-12 {
+  width: 100%;
+  flex: 0 0 100;
 }
 
 .header {
@@ -148,6 +220,65 @@ ul {
 .btn:active {
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-text, .btn-text:is(:link, :visited) {
+  font-size: 16px;
+  color: #55c57a;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 3px;
+  display: inline-block;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s ease-in-out;
+}
+.btn-text:is(:hover, :focus) {
+  background-color: #55c57a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-text:active {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.composition {
+  position: relative;
+}
+.composition-img {
+  width: 55%;
+  border-radius: 2px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  outline-offset: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.composition-img-1 {
+  left: 0;
+  top: -20px;
+}
+.composition-img-2 {
+  right: 0;
+  top: 20px;
+}
+.composition-img-3 {
+  top: 100px;
+  left: 25px;
+}
+.composition-img:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  outline: 15px solid #55c57a;
+}
+.composition:hover .composition-img:not(:hover) {
+  transform: scale(0.9);
+}
+
+.section-about {
+  padding: 250px 0;
+  background-color: #f7f7f7;
+  margin-top: -200px;
 }
 
 /*# sourceMappingURL=style.css.map */
