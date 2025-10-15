@@ -243,12 +243,6 @@ ul {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-<<<<<<< HEAD
-.section-about {
-  padding: 250px 0;
-  background-color: #f7f7f7;
-  margin-top: -200px;
-=======
 .composition {
   position: relative;
 }
@@ -280,7 +274,6 @@ ul {
 }
 .composition:hover .composition-img:not(:hover) {
   transform: scale(0.9);
->>>>>>> 21c6ca9a77b54ed70973fcf4e513f24a0016b190
 }
 
 /*# sourceMappingURL=style.css.map */
