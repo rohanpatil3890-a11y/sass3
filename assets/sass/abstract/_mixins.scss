@@ -1,6 +1,0 @@
-@mixin bgGradientClip{
-    background-image: linear-gradient(to right, $color-primary-light,$color-primary-dark);
-    background-clip: text;
-    color:transparent;
-    text-align: center;
-}
