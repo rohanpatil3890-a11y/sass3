@@ -175,6 +175,12 @@ ul {
   animation: moveInright 1s ease-in-out;
 }
 
+.section-about {
+  padding: 250px 0;
+  background-color: #f7f7f7;
+  margin-top: -200px;
+}
+
 .btn, .btn:link, .btn:visited {
   position: relative;
   padding: 15px 40px;
@@ -234,6 +240,39 @@ ul {
 .btn-text:active {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.composition {
+  position: relative;
+}
+.composition-img {
+  width: 55%;
+  border-radius: 2px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  outline-offset: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.composition-img-1 {
+  left: 0;
+  top: -20px;
+}
+.composition-img-2 {
+  right: 0;
+  top: 20px;
+}
+.composition-img-3 {
+  top: 100px;
+  left: 25px;
+}
+.composition-img:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  outline: 15px solid #55c57a;
+}
+.composition:hover .composition-img:not(:hover) {
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=style.css.map */
