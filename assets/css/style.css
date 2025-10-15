@@ -1,18 +1,246 @@
-/* Error: Undefined mixin.
- *   ,
- * 5 |     @include bgGradientClip;
- *   |     ^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   assets\sass\base\_typography.scss 5:5  @import
- *   assets\sass\style.scss 10:8            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 5 \2502      @include bgGradientClip;\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   assets\\sass\\base\\_typography.scss 5:5  @import\a   assets\\sass\\style.scss 10:8            root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: "Lato", "sans-serif";
+  color: #777;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.primary-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56a, #28b485);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 80px;
+}
+.primary-heading:is(:hover, :focus, :active) {
+  transform: scale(1.1);
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.para {
+  font-size: 16px;
+}
+.para:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-center {
+  align-items: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+@keyframes moveInleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveInright {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class^=col-] {
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: 25%;
+  flex: 0 0 25;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 50;
+}
+
+.col-12 {
+  width: 100%;
+  flex: 0 0 100;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../image/hero.jpg);
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+.header .logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: inline-block;
+  width: 75px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header-text-box {
+  color: #fff;
+  text-transform: uppercase;
+}
+.header-primary {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 25px;
+  animation: moveInleft 1s ease-in-out;
+}
+@media all and (max-width: 768px) {
+  .header-primary {
+    letter-spacing: 10px;
+  }
+  .header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .header-secondary {
+    letter-spacing: 5px;
+  }
+}
+.header-secondary {
+  font-size: 16px;
+  letter-spacing: 15px;
+  margin-bottom: 30px;
+  animation: moveInright 1s ease-in-out;
+}
+
+.btn, .btn:link, .btn:visited {
+  position: relative;
+  padding: 15px 40px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+.btn::after {
+  content: "";
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s ease-in-out;
+  background-color: inherit;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+.btn:hover, .btn:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+.btn:hover::after, .btn:focus::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.btn-text, .btn-text:is(:link, :visited) {
+  font-size: 16px;
+  color: #55c57a;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 3px;
+  display: inline-block;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s ease-in-out;
+}
+.btn-text:is(:hover, :focus) {
+  background-color: #55c57a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-text:active {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-about {
+  padding: 250px 0;
+  background-color: #f7f7f7;
+  margin-top: -200px;
+}
+
+/*# sourceMappingURL=style.css.map */
