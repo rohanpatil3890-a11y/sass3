@@ -247,6 +247,22 @@ ul {
   margin-top: -200px;
 }
 
+.section-features {
+  padding: 200px 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 106, 0.8)), to(rgba(126, 213, 106, 0.8))), url(../image/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 106, 0.8), rgba(126, 213, 106, 0.8)), url(../image/nat-4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+  margin-top: -100px;
+}
+.section-features > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
 .btn, .btn:link, .btn:visited {
   position: relative;
   padding: 15px 40px;
@@ -356,4 +372,27 @@ ul {
 .composition:hover .composition-img:not(:hover) {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.feature-box:is(:hover, :focus, :active) {
+  -webkit-transform: scale(1.05) translateY(-15px);
+          transform: scale(1.05) translateY(-15px);
+}
+.feature-box > i {
+  font-size: 60px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56a), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56a, #28b485);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  text-align: center;
 }
