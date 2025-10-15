@@ -1,0 +1,18 @@
+
+
+.feature-box{
+    background-color: rgba($color-white, .8);
+   padding: 25px;
+   border-radius:3px;
+   box-shadow: 0 15px 40px rgba($color-dark, .8);
+   transition: all 0.3s ease-in-out;
+
+   &:is(:hover, :focus, :active){
+    transform: scale(1.05) translateY(-15px);
+   }
+
+   >i{
+    font-size: 60px;
+    @include bgGradientClip;
+   }
+}
