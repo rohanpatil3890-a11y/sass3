@@ -30,26 +30,12 @@
         text-transform: uppercase;
     }
 
-    &-primary{
-        font-size:40px;
-        font-weight: 200;
-        letter-spacing:25px;
-        animation: moveInleft 1s ease-in-out;
-    }
-    @media all and (max-width: 768px){
-     &-primary{
-        letter-spacing: 10px;
-    }
-    .logo{
-          position: absolute;
-        top:20px;
-        left:20px;
-    }
-    &-secondary{
-        letter-spacing:5px;
-    }
-
-}
+    &-primary {
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: 25px;
+    animation: moveInleft 1s ease-in-out;
+  }
 
     
     &-secondary{
