@@ -220,19 +220,6 @@ ul {
   -webkit-animation: moveInleft 1s ease-in-out;
           animation: moveInleft 1s ease-in-out;
 }
-@media all and (max-width: 768px) {
-  .header-primary {
-    letter-spacing: 10px;
-  }
-  .header .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-  .header-secondary {
-    letter-spacing: 5px;
-  }
-}
 .header-secondary {
   font-size: 16px;
   letter-spacing: 15px;
@@ -261,6 +248,12 @@ ul {
 .section-features > * {
   -webkit-transform: skewY(7deg);
           transform: skewY(7deg);
+}
+
+.section-tours {
+  padding: 250px 0 150px;
+  background-color: #f7f7f7;
+  margin-top: -100px;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -395,4 +388,149 @@ ul {
           background-clip: text;
   color: transparent;
   text-align: center;
+}
+
+.card {
+  height: 520px;
+  position: relative;
+}
+.card-side {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.card-side-front {
+  background-color: #fff;
+}
+.card-side-back {
+  background-color: blue;
+  -webkit-transform: perspective(1500px) rotateY(180deg);
+          transform: perspective(1500px) rotateY(180deg);
+}
+.card-side-back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card-side-back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56a), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56a, #28b485);
+}
+.card-side-back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.card .card-img {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card .card-img-1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb900), to(#ff7730)), url(../image/nat-5.jpg);
+  background-image: linear-gradient(#ffb900, #ff7730), url(../image/nat-5.jpg);
+}
+.card .card-img-2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed56a), to(#28b485)), url(../image/nat-6.jpg);
+  background-image: linear-gradient(#7ed56a, #28b485), url(../image/nat-6.jpg);
+}
+.card .card-img-3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2998ff), to(#5643fa)), url(../image/nat-7.jpg);
+  background-image: linear-gradient(#2998ff, #5643fa), url(../image/nat-7.jpg);
+}
+.card:hover .card-side-front {
+  -webkit-transform: perspective(1500px) rotateY(-180deg);
+          transform: perspective(1500px) rotateY(-180deg);
+}
+.card:hover .card-side-back {
+  -webkit-transform: perspective(1500px) rotateY(0deg);
+          transform: perspective(1500px) rotateY(0deg);
+}
+.card-heading {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 28px;
+  width: 70%;
+  text-align: right;
+  color: #fff;
+}
+.card-heading-span {
+  padding: 10px 15px;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+.card-heading-span-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card-heading-span-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56a), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56a, #28b485);
+}
+.card-heading-span-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.card-details {
+  padding: 30px;
+}
+.card-details ul {
+  width: 80%;
+  margin: 0 auto;
+}
+.card-details ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px;
+}
+.card-details ul li:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
+}
+.card .card-cta {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+.card-price-only {
+  text-transform: uppercase;
+}
+.card-price-value {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 60px;
 }
