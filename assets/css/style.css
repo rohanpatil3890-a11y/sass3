@@ -309,31 +309,24 @@ ul {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: all 0.8s;
+  backface-visibility: hidden;
   transition: all 0.8s;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 .card-side-front {
   background-color: #fff;
 }
 .card-side-back {
   background-color: blue;
-  -webkit-transform: perspective(1500px) rotateY(180deg);
-          transform: perspective(1500px) rotateY(180deg);
+  transform: perspective(1500px) rotateY(180deg);
 }
 .card-side-back-1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card-side-back-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56a), to(#28b485));
   background-image: linear-gradient(to right bottom, #7ed56a, #28b485);
 }
 .card-side-back-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .card .card-img {
@@ -344,24 +337,19 @@ ul {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card .card-img-1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb900), to(#ff7730)), url(../image/nat-5.jpg);
   background-image: linear-gradient(#ffb900, #ff7730), url(../image/nat-5.jpg);
 }
 .card .card-img-2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7ed56a), to(#28b485)), url(../image/nat-6.jpg);
   background-image: linear-gradient(#7ed56a, #28b485), url(../image/nat-6.jpg);
 }
 .card .card-img-3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2998ff), to(#5643fa)), url(../image/nat-7.jpg);
   background-image: linear-gradient(#2998ff, #5643fa), url(../image/nat-7.jpg);
 }
 .card:hover .card-side-front {
-  -webkit-transform: perspective(1500px) rotateY(-180deg);
-          transform: perspective(1500px) rotateY(-180deg);
+  transform: perspective(1500px) rotateY(-180deg);
 }
 .card:hover .card-side-back {
-  -webkit-transform: perspective(1500px) rotateY(0deg);
-          transform: perspective(1500px) rotateY(0deg);
+  transform: perspective(1500px) rotateY(0deg);
 }
 .card-heading {
   position: absolute;
@@ -376,19 +364,15 @@ ul {
 }
 .card-heading-span {
   padding: 10px 15px;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .card-heading-span-1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card-heading-span-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56a), to(#28b485));
   background-image: linear-gradient(to right bottom, #7ed56a, #28b485);
 }
 .card-heading-span-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .card-details {
@@ -408,31 +392,15 @@ ul {
 }
 .card .card-cta {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: #fff;
 }
 .card-price-only {
@@ -443,3 +411,5 @@ ul {
   font-weight: 300;
   margin-bottom: 60px;
 }
+
+/*# sourceMappingURL=style.css.map */
