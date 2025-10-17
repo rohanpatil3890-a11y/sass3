@@ -4,7 +4,7 @@
     background-color: rgba($color-white, .8);
    padding: 25px;
    border-radius:3px;
-   box-shadow: 0 15px 40px rgba($color-dark, .8);
+   box-shadow: 0 15px 40px rgba($color-dark, .2);
    transition: all 0.3s ease-in-out;
 
    &:is(:hover, :focus, :active){
@@ -12,7 +12,8 @@
    }
 
    >i{
-    font-size: 60px;
+    display: inline-block;
+    font-size: 50px;
     @include bgGradientClip;
    }
 }
