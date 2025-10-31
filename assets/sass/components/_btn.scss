@@ -34,6 +34,12 @@
 
     }
 
+    &-green{
+        background-color: $color-primary-dark;
+        color: $color-white;
+
+    }
+
     &:hover,
     &:focus{
         transform: translateY(-4px);
